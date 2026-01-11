@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>A Message For You 💐</title>
+    <title>A Memory to be Kept 💐</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
@@ -25,50 +25,49 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Spreads content from top to bottom */
+            justify-content: center;
             align-items: center;
             height: 100vh;
             width: 100vw;
             text-align: center;
-            overflow: hidden; /* Keeps it strictly portrait/no-scroll */
+            overflow: hidden;
         }
 
         /* Entrance Animation */
         .content-wrapper {
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             padding: 20px;
-            animation: softFade 2.5s ease-out;
+            animation: softFade 2.2s ease-out;
         }
 
         @keyframes softFade {
-            0% { opacity: 0; transform: translateY(15px); }
+            0% { opacity: 0; transform: translateY(10px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
         .flower-icon {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-            opacity: 0.8;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            opacity: 0.7;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-weight: 400;
-            font-size: 2rem;
-            margin: 0 0 10px 0;
-            letter-spacing: -0.5px;
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.2px;
         }
 
         .subtitle {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             opacity: 0.6;
             font-weight: 400;
         }
@@ -76,22 +75,22 @@
         /* Audio Player Styling */
         .audio-container {
             width: 100%;
-            max-width: 280px;
-            margin: 0 auto;
+            max-width: 260px;
+            margin-bottom: 25px;
         }
 
         audio {
             width: 100%;
-            filter: sepia(20%) brightness(95%) contrast(90%); /* Softens the default player look */
+            filter: sepia(10%) brightness(98%);
         }
 
-        footer {
-            padding-bottom: 50px; /* Space from the bottom of the phone screen */
+        .brand-footer {
             font-family: 'Playfair Display', serif;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-style: italic;
             letter-spacing: 1px;
             opacity: 0.4;
+            margin-top: 5px;
         }
 
     </style>
@@ -100,8 +99,9 @@
 
     <div class="content-wrapper">
         <div class="flower-icon">🌸</div>
-        <h1>For Someone Special</h1>
-        <div class="subtitle">A message from the heart</div>
+        
+        <h1>A Memory to be Kept</h1>
+        <div class="subtitle">THE ADORABLE SAMANTHA</div>
 
         <div class="audio-container">
             <audio controls>
@@ -109,9 +109,9 @@
                 Your browser does not support audio.
             </audio>
         </div>
-    </div>
 
-    <footer>The Crochet Garden</footer>
+        <div class="brand-footer">The Crochet Garden</div>
+    </div>
 
 </body>
 </html>

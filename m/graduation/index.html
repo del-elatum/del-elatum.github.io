@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A New Chapter Begins 🎓</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fdfaf7; /* Warm soft cream */
+            --text-color: #5a5a5a;
+            --accent-color: #8da399; /* Sage green */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            padding: 50px 20px 30px 20px;
+            animation: softFade 2s ease-out;
+        }
+
+        @keyframes softFade {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .brand-top {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.8rem;
+            font-style: italic;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 2rem;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            opacity: 0.6;
+            font-weight: 400;
+        }
+
+        /* Video Styling */
+        .video-container {
+            width: 90%;
+            max-width: 350px;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            background: #fff;
+            line-height: 0; /* Removes tiny gap at bottom of video */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="brand-top">The Crochet Garden</span>
+        <h1>A New Chapter Begins</h1>
+        <div class="subtitle">Class of 2026</div>
+    </header>
+
+    <div class="video-container">
+        <video playsinline controls poster="placeholder.jpg">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <footer>Handmade Memories</footer>
+
+</body>
+</html>

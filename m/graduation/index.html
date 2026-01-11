@@ -20,16 +20,15 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centers everything vertically */
+            justify-content: flex-start; /* Starts content at the top */
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             width: 100vw;
             text-align: center;
-            overflow: hidden;
         }
 
         header {
-            padding: 20px;
+            padding: 60px 20px 30px 20px; /* Generous top padding for an airy feel */
             animation: softFade 2s ease-out;
         }
 
@@ -60,18 +59,25 @@
             font-size: 0.75rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             opacity: 0.6;
         }
 
+        /* Responsive Video Container */
         .video-container {
             width: 85%;
-            max-width: 300px; /* Slightly smaller for a cleaner look */
+            /* This is the magic part: 
+               It sets the height to 60% of the phone's screen height, 
+               keeping the portrait ratio (9/16) intact.
+            */
+            height: 60vh; 
+            max-width: 400px;
             aspect-ratio: 9 / 16;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             background: #fff;
+            margin-bottom: 40px;
         }
 
         video {

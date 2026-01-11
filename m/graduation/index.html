@@ -20,13 +20,16 @@
             padding: 0;
             display: flex;
             flex-direction: column;
+            justify-content: center; /* Centers everything vertically */
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
+            width: 100vw;
             text-align: center;
+            overflow: hidden;
         }
 
         header {
-            padding: 50px 20px 30px 20px;
+            padding: 20px;
             animation: softFade 2s ease-out;
         }
 
@@ -57,36 +60,25 @@
             font-size: 0.75rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             opacity: 0.6;
         }
 
-        /* The Fix: Explicit Portrait Aspect Ratio */
         .video-container {
             width: 85%;
-            max-width: 320px;
-            aspect-ratio: 9 / 16; /* Forces portrait shape immediately */
-            margin-bottom: 40px;
+            max-width: 300px; /* Slightly smaller for a cleaner look */
+            aspect-ratio: 9 / 16;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            background: #eee; /* Light placeholder color while loading */
+            background: #fff;
         }
 
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures video fills the portrait box */
+            object-fit: cover;
             display: block;
-        }
-
-        footer {
-            margin-top: auto;
-            padding-bottom: 40px;
-            font-family: 'Playfair Display', serif;
-            font-size: 0.85rem;
-            font-style: italic;
-            opacity: 0.3;
         }
     </style>
 </head>
@@ -99,13 +91,11 @@
     </header>
 
     <div class="video-container">
-        <video autoplay muted loop playsinline poster="placeholder.jpg">
+        <video autoplay muted loop playsinline>
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-
-    <footer>Handmade Memories</footer>
 
 </body>
 </html>

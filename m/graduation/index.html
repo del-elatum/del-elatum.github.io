@@ -8,9 +8,8 @@
     
     <style>
         :root {
-            --bg-color: #fdfaf7; /* Warm soft cream */
+            --bg-color: #fdfaf7;
             --text-color: #5a5a5a;
-            --accent-color: #8da399; /* Sage green */
         }
 
         body {
@@ -26,7 +25,6 @@
             text-align: center;
         }
 
-        /* Header Section */
         header {
             padding: 50px 20px 30px 20px;
             animation: softFade 2s ease-out;
@@ -51,9 +49,8 @@
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-weight: 400;
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin: 0 0 10px 0;
-            letter-spacing: -0.5px;
         }
 
         .subtitle {
@@ -62,24 +59,24 @@
             text-transform: uppercase;
             margin-bottom: 20px;
             opacity: 0.6;
-            font-weight: 400;
         }
 
-        /* Video Styling */
+        /* The Fix: Explicit Portrait Aspect Ratio */
         .video-container {
-            width: 90%;
-            max-width: 350px;
-            margin-bottom: 50px;
-            border-radius: 12px;
+            width: 85%;
+            max-width: 320px;
+            aspect-ratio: 9 / 16; /* Forces portrait shape immediately */
+            margin-bottom: 40px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            background: #fff;
-            line-height: 0; /* Removes tiny gap at bottom of video */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            background: #eee; /* Light placeholder color while loading */
         }
 
         video {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover; /* Ensures video fills the portrait box */
             display: block;
         }
 
@@ -102,7 +99,7 @@
     </header>
 
     <div class="video-container">
-        <video playsinline controls poster="placeholder.jpg">
+        <video autoplay muted loop playsinline poster="placeholder.jpg">
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
